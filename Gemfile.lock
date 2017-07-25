@@ -36,6 +36,19 @@ GEM
       watir (~> 6.0)
     page_navigation (0.10)
       data_magic (>= 0.22)
+    rspec (3.6.0)
+      rspec-core (~> 3.6.0)
+      rspec-expectations (~> 3.6.0)
+      rspec-mocks (~> 3.6.0)
+    rspec-core (3.6.0)
+      rspec-support (~> 3.6.0)
+    rspec-expectations (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-mocks (3.6.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.6.0)
+    rspec-support (3.6.0)
     rubyzip (1.2.1)
     selenium-webdriver (3.4.3)
       childprocess (~> 0.5)
@@ -50,6 +63,7 @@ PLATFORMS
 DEPENDENCIES
   cucumber!
   page-object!
+  rspec!
   selenium-webdriver!
   watir!
 

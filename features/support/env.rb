@@ -1,6 +1,8 @@
 require 'watir'
 require 'cucumber'
 require 'page-object'
+require 'selenium-webdriver'
+require 'rspec'
 
 World PageObject::PageFactory
 

@@ -4,16 +4,18 @@ class Search
   page_url 'http://amazon.com'
 
   # arg coming from feature?
-  text_field(:text, :id => 'twotabsearchtextbox').set "#{arg}"
-  send_keys :return
+  text_field(:search_for_items, :id => 'twotabsearchtextbox')
+  button(:submit, :value => 'Go')
+  #send_keys :return
 end
 
 class SearchResult
   include PageObject
 
-  select_list(:id => "resut_2").wait_until_present
-  # xpath here?
-  div(:id => "resultscol", :xpath => "#{arg}")
+  span(:response, :id => 'editableBreadcrumbContent')
+  #select_list(:item_search_results, :id => "result_2")
+  # xpath here? how to get 'pens' as arg
+  #span(:response, :xpath => '//span[id="editableBreadcrumbContent"]')
   # assert is from which library
 
 end

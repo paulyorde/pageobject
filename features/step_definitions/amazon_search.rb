@@ -2,18 +2,21 @@ Given(/^a user goes to Amzon$/) do
   visit_page Search
 end
 
-When(/^they search for "([^"]*)"$/) do |arg|
+When(/^they search for pens$/) do
   # how to use page object here?
   on_page Search do |page|
-    page.text = 'search for'
+    page.search_for_items='pens'
     # how to set parameter for return
-    page.send
+    #page.send
+    page.submit
     sleep 2
   end
 end
 
-Then(/^amazon should return results for "([^"]*)"$/) do |arg|
-  on_page SearchResult do |page|
-    expect(page.response).to include? "#{arg}"
+Then(/^amazon should return results for pens$/) do
+    on_page SearchResult do |page|
+    #x = page.response
+    expect(page.response).to include 'pens'
   end
+
 end
